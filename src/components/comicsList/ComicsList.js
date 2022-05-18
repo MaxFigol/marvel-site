@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
+import AppBanner from '../appBanner/AppBanner'
 
 import './comicsList.scss';
 
@@ -62,6 +63,7 @@ const ComicsList = () => {
 
     return (
         <div className="comics__list">
+            <AppBanner/>
             {errorMessage}
             {spinner}
             {items}
